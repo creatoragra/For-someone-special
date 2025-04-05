@@ -4,62 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rate My Personality</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"> <!-- Adding a cozy font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
     <style>
-        body {
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Indie Flower', Arial, sans-serif;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Loading screen */
+        #loader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            font-size: 32px;
+            font-style: italic;
+            font-weight: bold;
+            color: #ff69b4;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Main content hidden initially */
+        #main-content {
+            display: none;
             background: url('canva-pink-aesthetic-cute-background.jpg') no-repeat center center fixed;
             background-size: cover;
             color: black;
-            font-family: 'Indie Flower', Arial, sans-serif; /* Applying the cozy font */
             text-align: center;
             padding: 20px;
-            margin: 0;
-            font-style: italic; /* Making the text italic */
-            font-weight: bold; /* Making the text bold */
+            font-style: italic;
+            font-weight: bold;
         }
+
         .rating-list {
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center align the text */
+            align-items: center;
             margin-top: 35px;
         }
+
         .rating-list p {
             font-size: 48px;
             margin: 5px 0;
-            animation: fadeIn 2s ease-in-out; /* Adding animation */
+            animation: fadeIn 2s ease-in-out;
         }
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+
         h2 {
             font-size: 78px;
-            animation: fadeIn 2s ease-in-out; /* Adding animation */
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
-    <h2>Rating Someone Special ✨ Personality!!</h2>
-    <div class="rating-list">
-        <p>Looks :- (...🌕...)</p>
-        <p>Behavior :- (150 / 10)</p>
-        <p>Funny :- (99 / 10)</p>
-        <p>Cuteness :- (♾️ / 10)</p>
-        <p>Attitude :- (🤏 / 10)</p>
-        <p>Loving :- (❤️ / 10)</p>
-        <p>Anger :- (5 / 10)</p>
-        <p>Caring :- (10 / 0)</p>
-        <p>Honesty :- (120 / 10)</p>
-        <p><p>
-        <p><p>
-        <p>You are not defined by words or numbers, you are precious sans🤌✨<p> 
-        <p> I am Sorry Sanskriti .. ❤️<p>
+    <!-- Loading screen -->
+    <div id="loader">Loading your magic...</div>
+
+    <!-- Main content -->
+    <div id="main-content">
+        <h2>Rating Someone Special ✨ Personality!!</h2>
+        <div class="rating-list">
+            <p>Looks :- (...🌕...)</p>
+            <p>Behavior :- (150 / 10)</p>
+            <p>Funny :- (99 / 10)</p>
+            <p>Cuteness :- (♾️ / 10)</p>
+            <p>Attitude :- (🤏 / 10)</p>
+            <p>Loving :- (❤️ / 10)</p>
+            <p>Anger :- (5 / 10)</p>
+            <p>Caring :- (10 / 0)</p>
+            <p>Honesty :- (120 / 10)</p>
+            <p>You are not defined by words or numbers, you are precious sans🤌✨</p> 
+            <p>I am Sorry Sanskriti .. ❤️</p>
+        </div>
     </div>
+
+    <script>
+        // Simulate loading
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                document.getElementById("loader").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+                document.body.style.overflow = "auto";
+            }, 2000); // 2 seconds delay
+        });
+    </script>
 </body>
 </html>
