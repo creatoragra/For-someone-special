@@ -6,12 +6,17 @@
     <title>Rate My Personality</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
     <style>
-        body, html {
+        html, body {
             margin: 0;
             padding: 0;
-            font-family: 'Indie Flower', Arial, sans-serif;
             height: 100%;
-            overflow: hidden;
+            font-family: 'Indie Flower', Arial, sans-serif;
+            background: url('canva-pink-aesthetic-cute-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-style: italic;
+            font-weight: bold;
+            color: black;
+            overflow-x: hidden;
         }
 
         /* Loading screen */
@@ -34,13 +39,9 @@
         /* Main content hidden initially */
         #main-content {
             display: none;
-            background: url('canva-pink-aesthetic-cute-background.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: black;
+            min-height: 100vh; /* Ensures it fills the full screen height */
             text-align: center;
             padding: 20px;
-            font-style: italic;
-            font-weight: bold;
         }
 
         .rating-list {
